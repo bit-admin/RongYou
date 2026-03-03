@@ -62,7 +62,8 @@
           "arch": ["x64"]
         }
       ],
-      "category": "Education"
+      "category": "Education",
+      "maintainer": "RongYou <rongyou@users.noreply.github.com>"
     }
   },
   "dependencies": {
