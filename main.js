@@ -40,6 +40,12 @@ function createWindow() {
   // Get reference to the webview's webContents once it's ready
   mainWindow.webContents.on('did-attach-webview', (event, wc) => {
     webviewContents = wc;
+
+    // Fix: website doesn't set body background, Electron defaults to dark.
+    // Inject white background on every page load (including navigations).
+    wc.on('dom-ready', () => {
+      wc.insertCSS('html, body { background-color: #fff !important; }');
+    });
   });
 }
 
