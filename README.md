@@ -14,7 +14,7 @@ Electron desktop app for automating course video watching on the [livedu.com.cn]
 
 1. Download the latest release for your platform
 2. Launch the app
-3. Select your school (defaults to 北京理工大学), enter credentials
+3. Select your school (defaults to BIT), enter credentials
 4. Click **Login** to auto-login (includes captcha solving)
 5. Click **Auto Play** to start watching courses automatically
 6. Click **Stop** to halt at any time
