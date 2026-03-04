@@ -1,6 +1,6 @@
 {
   "name": "rongyou",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Electron app for RongYou (融优学堂) course automation",
   "main": "main.js",
   "scripts": {
