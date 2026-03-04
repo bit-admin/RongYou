@@ -1,6 +1,6 @@
 'use strict';
 
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, nativeTheme } = require('electron');
 const path = require('path');
 const Store = require('./src/store');
 const { SCHOOLS, DEFAULT_SCHOOL_CODE } = require('./src/schools');
@@ -65,6 +65,8 @@ async function getWebview() {
 }
 
 app.whenReady().then(() => {
+  nativeTheme.themeSource = 'light';
+
   store = new Store(app);
   createWindow();
 

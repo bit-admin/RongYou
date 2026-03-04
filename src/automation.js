@@ -95,10 +95,10 @@ async function handleCaptcha(webview, log) {
 
         // OCR
         const { data: { text } } = await worker.recognize(base64);
-        const captchaText = text.trim().replace(/\s/g, '');
+        const captchaText = text.trim().replace(/[^a-zA-Z0-9]/g, '').substring(0, 4);
         log(`OCR result: "${captchaText}"`);
 
-        if (!captchaText || captchaText.length < 2) {
+        if (!captchaText || captchaText.length !== 4) {
           log('OCR result too short, refreshing captcha...');
           await webview.executeJavaScript(`
             var img = document.querySelector('#yzmmsg_xh');
